@@ -1,2 +1,2 @@
-# auth0-single-sign-out-sample
-Sign out from all of your applications
+# Auth0 Single Sign-Out Sample
+

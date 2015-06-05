@@ -1,0 +1,19 @@
+<div class="home">
+	<h2 ng-hide="username">Signing out...</h2>
+	<h2 ng-show="username">Signing out {{username}}...</h2>
+
+	<ul class="list-group" style="margin-top: 40px;">
+		<li class="list-group-item" ng-class="{'application-logout-success': client.status === 'loaded', 'application-logout-error': client.status === 'error'}" 
+			ng-repeat="client in clients">
+			{{client.name}} 
+			<span style="float: right">
+				<i ng-hide="client.complete" class="application-icon fa fa-spinner fa-spin"></i>
+				<i ng-show="client.status === 'loaded'" class="application-icon fa fa-check-square"></i>
+				<i ng-show="client.status === 'error'" class="application-icon fa fa-times-circle"></i>
+			</span>
+			<client-logout data-client="client" />
+		</li>
+	</ul>
+
+	<button ng-show="complete" type="button" class="btn btn-primary pull-right" ng-click="logout()">Continue</button>
+</div>
