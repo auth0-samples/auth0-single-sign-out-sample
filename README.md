@@ -78,6 +78,13 @@ Once logout is complete in all of these applications Mary can hit the continue b
 
 ![Logout Complete](https://cdn.auth0.com/docs/img/single-sign-out-complete.png)
 
+## Considerations
+
+The complete single sign-out flow is based on the SSO cookie in Auth0 and rendering iframes. Take into account that:
+
+ - For the IFRAMES, there's no way to detect if the IFRAME rendered correctly. You can only detect if it completed or not. For slow applications, if it takes more than 5 seconds to sign out the sample will show a red line instead of the green line.
+ - Depending on specific browser settings there might be issues with the SSO cookie or the rendering of the IFRAME. In IE for example a setting called "Protected Mode" should be disabled or your applications will need a P3P header for this to work correctly (http://stackoverflow.com/questions/389456/cookie-blocked-not-saved-in-iframe-in-internet-explorer).
+
 
 
 
