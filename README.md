@@ -43,7 +43,7 @@ When we call the `getSSOData` method on the client-side SDK we'll see the follow
 }
 ```
  
-This means the user logged in to 3 different applications (`sessionClients`). The sample application will render an iframe for all of the applications (it's the responsablity of the logout application to know the url of the logout endpoint, this information is not available in Auth0.
+This means the user logged in to 3 different applications (`sessionClients`). The sample application will render an iframe for all of the applications (it's the responsiblity of the logout application to know the url of the logout endpoint, this information is not available in Auth0.
 
 ```js
   var clients = {
